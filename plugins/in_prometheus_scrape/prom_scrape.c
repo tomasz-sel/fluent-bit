@@ -98,7 +98,7 @@ static int collect_metrics(struct prom_scrape *ctx)
         goto client_error;
     }
 
-    flb_http_buffer_size(c, 1024 * 1000 * 10);
+    flb_http_buffer_size(c,0);
 
     ret = flb_http_do(c, &b_sent);
     if (ret != 0) {
